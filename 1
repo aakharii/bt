@@ -1021,22 +1021,24 @@ receiver.transfer(amount);
 }
 }
 2. Steps to Perform
-193.	Open https\://remix.ethereum.org in the browser.
-194.	In File Explorer (first icon on the left bar), click the "Create new file" icon, type payableEther.sol, press Enter, and paste the code into the editor.
-195.	Click the Solidity Compiler icon (second icon on the left bar). In the Compiler dropdown select 0.8.21.
-196.	Click the blue "Compile payableEther.sol" button. Wait for the green tick on the compiler icon (no red errors).
-197.	Click the Deploy & Run Transactions icon (third icon on the left bar).
-198.	Environment dropdown: select "Remix VM". Account dropdown: leave the first account selected.
-199.	Contract dropdown: select PayableEther.
-200.	Click the orange "Deploy" button.
-201.	Scroll down to "Deployed Contracts" and click the arrow next to PayableEther to expand its function buttons (blue = read only, orange = changes data).
-202.	Scroll up to the "Value" field (below Account). Type 2 and change the unit dropdown from Wei to Ether.
-203.	Click the orange "deposit" button.
-204.	Click the blue "contractBalance" button. Result: 2000000000000000000.
-205.	Copy the 2nd account address: in the Account dropdown select the 2nd account, click the copy icon next to the dropdown, then select the 1st account again.
-206.	Set the Value field back to 0 (unit Wei).
-207.	Next to "transferEther" type \<paste 2nd account address>, 1000000000000000000 and click transferEther.
-208.	Click "contractBalance" again. Result: 1000000000000000000.
+1. Open [https://remix.ethereum.org](https://remix.ethereum.org?utm_source=chatgpt.com) in the browser.
+2. In File Explorer (first icon on the left bar), click the "Create new file" icon, type payableEther.sol, press Enter, and paste the code into the editor.
+3. Click the Solidity Compiler icon (second icon on the left bar). In the Compiler dropdown select 0.8.21.
+4. Click the blue "Compile payableEther.sol" button. Wait for the green tick on the compiler icon (no red errors).
+5. Click the Deploy & Run Transactions icon (third icon on the left bar).
+6. Environment dropdown: select "Remix VM". Account dropdown: leave the first account selected.
+7. Contract dropdown: select PayableEther.
+8. Click the orange "Deploy" button.
+9. Scroll down to "Deployed Contracts" and click the arrow next to PayableEther to expand its function buttons (blue = read only, orange = changes data).
+10. Scroll up to the "Value" field (below Account). Type 2 and change the unit dropdown from Wei to Ether.
+11. Click the orange "deposit" button.
+12. Click the blue "contractBalance" button. Result: 2000000000000000000.
+13. Copy the 2nd account address: in the Account dropdown select the 2nd account, click the copy icon next to the dropdown, then select the 1st account again.
+14. Set the Value field back to 0 (unit Wei).
+15. Next to "transferEther" type , 1000000000000000000 and click transferEther.
+16. Click "contractBalance" again. Result: 1000000000000000000.
+
+=================================================
 Practical 8B – Payable Ether: Simple Bank (Remix)
 1. Code
 File: Bank.sol
@@ -1063,23 +1065,25 @@ return balance[msg.sender];
 }
 }
 2. Steps to Perform
-209.	Open https\://remix.ethereum.org in the browser.
-210.	In File Explorer (first icon on the left bar), click the "Create new file" icon, type Bank.sol, press Enter, and paste the code into the editor.
-211.	Click the Solidity Compiler icon (second icon on the left bar). In the Compiler dropdown select 0.8.21.
-212.	Click the blue "Compile Bank.sol" button. Wait for the green tick on the compiler icon (no red errors).
-213.	Click the Deploy & Run Transactions icon (third icon on the left bar).
-214.	Environment dropdown: select "Remix VM". Account dropdown: leave the first account selected.
-215.	Contract dropdown: select Bank.
-216.	Click the orange "Deploy" button.
-217.	Scroll down to "Deployed Contracts" and click the arrow next to Bank to expand its function buttons (blue = read only, orange = changes data).
-218.	Scroll up to the "Value" field. Type 2 and change the unit dropdown from Wei to Ether.
-219.	Click the orange "deposit" button.
-220.	Click the blue "showBalance" button. Result: 2000000000000000000.
-221.	Copy the 2nd account address: in the Account dropdown select the 2nd account, click the copy icon next to the dropdown, then select the 1st account again.
-222.	Set the Value field back to 0 (unit Wei).
-223.	Next to "transferBalance" type \<paste 2nd account address>, 500000000000000000 and click transferBalance.
-224.	Next to "withdraw" type 1000000000000000000 and click withdraw.
-225.	Click "showBalance" again. Result: 500000000000000000.f
+1. Open [https://remix.ethereum.org](https://remix.ethereum.org?utm_source=chatgpt.com) in the browser.
+2. In File Explorer (first icon on the left bar), click the "Create new file" icon, type Bank.sol, press Enter, and paste the code into the editor.
+3. Click the Solidity Compiler icon (second icon on the left bar). In the Compiler dropdown select 0.8.21.
+4. Click the blue "Compile Bank.sol" button. Wait for the green tick on the compiler icon (no red errors).
+5. Click the Deploy & Run Transactions icon (third icon on the left bar).
+6. Environment dropdown: select "Remix VM". Account dropdown: leave the first account selected.
+7. Contract dropdown: select Bank.
+8. Click the orange "Deploy" button.
+9. Scroll down to "Deployed Contracts" and click the arrow next to Bank to expand its function buttons (blue = read only, orange = changes data).
+10. Scroll up to the "Value" field. Type 2 and change the unit dropdown from Wei to Ether.
+11. Click the orange "deposit" button.
+12. Click the blue "showBalance" button. Result: 2000000000000000000.
+13. Copy the 2nd account address: in the Account dropdown select the 2nd account, click the copy icon next to the dropdown, then select the 1st account again.
+14. Set the Value field back to 0 (unit Wei).
+15. Next to "transferBalance" type , 500000000000000000 and click transferBalance.
+16. Next to "withdraw" type 1000000000000000000 and click withdraw.
+17. Click "showBalance" again. Result: 500000000000000000.
+
+=============================================================
 Practical 8C – Student Fee Payment Smart Contract (Remix, Solidity)
 1. Code
 File: StudentFees.sol
@@ -1116,16 +1120,14 @@ contract StudentFees {
     }
 }
 2. Steps to Perform
-226.	Open Remix and create StudentFees.sol.
-227.	Compile using Solidity 0.8.21.
-228.	Select Remix VM, select StudentFees, and click Deploy.
-229.	Set Value to 1 and unit to Ether; click payFees.
-230.	Call getFeesPaid with the current account address.
-231.	To test a second student, choose another account and repeat the payment.
-3. Input Values
-Function	Input	Expected output
-payFees	Value 1 Ether	Payment accepted
-getFeesPaid	student account address	1000000000000000000
+1. Open Remix at [https://remix.ethereum.org](https://remix.ethereum.org?utm_source=chatgpt.com) and create StudentFees.sol.
+2. Compile using Solidity 0.8.21.
+3. Select Remix VM, select StudentFees, and click Deploy.
+4. Set Value to 1 and unit to Ether; click payFees.
+5. Call getFeesPaid with the current account address.
+6. To test a second student, choose another account and repeat the payment.
+
+=============================================================
 Practical 9 – Smart Contract for Student Scholarship (Remix, Solidity)
 1. Code
 File: StudentScholarship.sol
@@ -1190,22 +1192,24 @@ contract StudentScholarship {
     }
 }
 2. Steps to Perform
-232.	Open https://remix.ethereum.org and create StudentScholarship.sol.
-233.	Compile with Solidity 0.8.21.
-234.	Select Remix VM, select StudentScholarship, and click Deploy.
-235.	Call addStudent with 101, "Khush", "MSc CS", 55.
-236.	Call getStudent with 101; eligibility should be false.
-237.	Add another student using 102, "Sarth", "MSc CS", 85.
-238.	Set Value to 100 Wei and click depositFunds.
-239.	Select a different account, call claimScholarship with 102.
-240.	Call getTotalFunds to see the remaining amount.
-3. Input Values
-Function	Input	Expected output
-addStudent	101, "Khush", "MSc CS", 55	eligibility false
-addStudent	102, "Sarth", "MSc CS", 85	eligibility true
-depositFunds	Value 100 Wei	funds added
-claimScholarship	102 from another account	4 Wei transferred
-getTotalFunds	no input	96 Wei after one claim
+1. Open [https://remix.ethereum.org](https://remix.ethereum.org?utm_source=chatgpt.com) in the browser.
+2. In File Explorer (first icon on the left bar), click the "Create new file" icon, type StudentScholarship.sol, press Enter, and paste the code into the editor.
+3. Click the Solidity Compiler icon (second icon on the left bar). In the Compiler dropdown select 0.8.21.
+4. Click the blue "Compile StudentScholarship.sol" button. Wait for the green tick on the compiler icon (no red errors).
+5. Click the Deploy & Run Transactions icon (third icon on the left bar).
+6. Environment dropdown: select "Remix VM". Account dropdown: leave the first account selected.
+7. Contract dropdown: select StudentScholarship.
+8. Click the orange "Deploy" button.
+9. Scroll down to "Deployed Contracts" and click the arrow next to StudentScholarship to expand its function buttons.
+10. Next to "addStudent", enter `101, "Khush", "MSc CS", 55` and click addStudent.
+11. Next to "getStudent", enter `101` and click getStudent. Eligibility should be false.
+12. Next to "addStudent", enter `102, "Sarth", "MSc CS", 85` and click addStudent.
+13. In the Value field, enter `100` and select Wei from the unit dropdown. Click depositFunds.
+14. Select a different account from the Account dropdown and call claimScholarship with `102`.
+15. Click getTotalFunds to see the remaining amount.
+
+
+=========================================================
 Practical 10 – Configuring a Workspace for a DApp (Addition)
 1. Code
 File: AdditionDApp.sol
@@ -1268,6 +1272,8 @@ document.getElementById("add").onclick = async () => {
 3. Input Values
 Input	Expected output
 a = 25, b = 15	40
+
+=============================================
 Practical 11 – DApp for Bank Transactions
 1. Code
 File: BankDApp.sol
@@ -1350,21 +1356,26 @@ document.getElementById("balance").onclick = async () => {
   document.getElementById("result").textContent = ethers.formatEther(value) + " ETH";
 };
 2. Steps to Perform
-249.	Configure Ganache and MetaMask as described in Practical 10.
-250.	In Remix, create BankDApp.sol, compile and deploy to the Ganache network through MetaMask.
-251.	Copy the deployed contract address into app.js.
-252.	Save index.html and app.js in the same folder and start a local server using npx serve.
-253.	Open the local URL and click Connect MetaMask.
-254.	Enter 1 in Deposit in ETH and click Deposit. Confirm the transaction in MetaMask.
-255.	Click Show Balance. It should show 1 ETH.
-256.	Enter 0.25 in Withdraw in ETH and click Withdraw. Confirm the transaction.
-257.	Click Show Balance again.
+
+==================================================================
+Configure Ganache and MetaMask as described in Practical 10.
+1. In Remix, create BankDApp.sol, compile and deploy to the Ganache network through MetaMask.
+2. Copy the deployed contract address into app.js.
+3. Save index.html and app.js in the same folder and start a local server using `npx serve`.
+4. Open the local URL and click Connect MetaMask.
+5. Enter 1 in Deposit in ETH and click Deposit. Confirm the transaction in MetaMask.
+6. Click Show Balance. It should show 1 ETH.
+7. Enter 0.25 in Withdraw in ETH and click Withdraw. Confirm the transaction.
+8. Click Show Balance again.
+
 3. Input Values
 Function	Input	Expected output
 Deposit	1 ETH	Deposit successful
 Show Balance	no input	1 ETH
 Withdraw	0.25 ETH	Withdrawal successful
 Show Balance	no input	0.75 ETH
+
+===================================================
 Practical 12A – DApp for Prime or Composite Number
 1. Code
 File: PrimeCheck.sol
@@ -1414,17 +1425,12 @@ document.getElementById("check").onclick = async () => {
     Number(n) < 2 ? "Neither prime nor composite" : prime ? "Prime" : "Composite";
 };
 2. Steps to Perform
-258.	Set up Ganache and MetaMask.
-259.	Create PrimeCheck.sol in Remix, compile with 0.8.21, and deploy to Ganache through MetaMask.
-260.	Paste the deployed address into app.js.
-261.	Save index.html and app.js in one folder and run npx serve.
-262.	Open the local URL, connect MetaMask, enter 67, and click Check.
-263.	Repeat with 24.
-3. Input Values
-Input	Expected output
-67	Prime
-24	Composite
-1	Neither prime nor composite
+1. Set up Ganache and MetaMask.
+2. Create PrimeCheck.sol in Remix, compile with 0.8.21, and deploy to Ganache through MetaMask.
+3. Paste the deployed contract address into app.js.
+4. Save index.html and app.js in one folder and run `npx serve`.
+5. Open the local URL, connect MetaMask, enter 67, and click Check.
+6. Repeat with 24.
 
 ==================================================
 Practical 12B – Voting DApp (Multiple Accounts)
@@ -1495,18 +1501,13 @@ document.getElementById("results").onclick = async () => {
   document.getElementById("result").textContent = "Votes: " + count.toString();
 };
 2. Steps to Perform
-264.	Deploy VotingDApp.sol to Ganache using Remix and MetaMask.
-265.	Copy the contract address into app.js.
-266.	Run the web app using npx serve and connect MetaMask.
-267.	Choose candidate 1 and click Vote; confirm the transaction.
-268.	Change MetaMask to another imported Ganache account, reconnect if needed, and vote for candidate 2.
-269.	Query the vote count for candidate 1 and candidate 2.
-3. Input Values
-Action	Input	Expected output
-Vote	account 1, candidate 1	Vote recorded
-Vote	account 2, candidate 2	Vote recorded
-Show Votes	candidate 1	1
-Show Votes	candidate 2	1
+1. Deploy VotingDApp.sol to Ganache using Remix and MetaMask.
+2. Copy the contract address into app.js.
+3. Run the web app using `npx serve` and connect MetaMask.
+4. Choose candidate 1 and click Vote; confirm the transaction.
+5. Change MetaMask to another imported Ganache account, reconnect if needed, and vote for candidate 2.
+6. Query the vote count for candidate 1 and candidate 2.
+
 
 ======================================
 Practical 13 – DApp Using Hardhat
@@ -1541,21 +1542,16 @@ contract StudentRegistration {
     }
 }
 2. Steps to Perform
-270.	Install Node.js LTS. Open PowerShell in a new project folder.
-271.	Run npm init -y.
-272.	Run npm install --save-dev hardhat.
-273.	Run npx hardhat --version.
-274.	Run npx hardhat --init and select A minimal Hardhat project. Follow the prompts to enable ESM and install dependencies.
-275.	Save the Solidity files in the contracts folder.
-276.	Compile using npx hardhat compile.
-277.	Start a local node using npx hardhat node in one terminal.
-278.	In a second terminal, deploy using the deployment script format generated by your Hardhat version. Configure the local network in hardhat.config.js if needed.
-279.	To interact, use the Hardhat console or a script; call add(25, 15) for 40, and register roll number 101 with name "Khush".
-3. Input Values
-Contract/function	Input	Expected output
-Addition.add	25, 15	40
-StudentRegistration.registerStudent	101, "Khush"	Student record stored
-StudentRegistration.getStudent	101	"Khush", 101
+1. Install Node.js LTS. Open PowerShell in a new project folder.
+2. Run `npm init -y`.
+3. Run `npm install --save-dev hardhat`.
+4. Run `npx hardhat --version`.
+5. Run `npx hardhat --init` and select A minimal Hardhat project. Follow the prompts to enable ESM and install dependencies.
+6. Save the Solidity files in the `contracts` folder.
+7. Compile using `npx hardhat compile`.
+8. Start a local node using `npx hardhat node` in one terminal.
+9. In a second terminal, deploy using the deployment script format generated by your Hardhat version. Configure the local network in `hardhat.config.js` if needed.
+10. To interact, use the Hardhat console or a script; call `add(25, 15)` for 40, and register roll number `101` with name `"Khush"`.
 
 ____________________________________________________________________
 Practical 14 – Simple Student Chaincode Using Hyperledger Fabric
@@ -1610,19 +1606,13 @@ class StudentContract extends Contract {
  
 module.exports = StudentContract;
 2. Steps to Perform
-280.	Install Docker Desktop and Git, then follow the official Hyperledger Fabric samples installation instructions for your operating system.
-281.	Download the Fabric samples and binaries using the official installer script.
-282.	Start the test network from the fabric-samples/test-network folder using ./network.sh up createChannel -ca (Linux/macOS/Git Bash).
-283.	Package and deploy the chaincode using the Fabric test-network chaincode lifecycle commands. The exact package/approve/commit commands depend on the Fabric version; use the commands supplied with the installed samples.
-284.	Place student.js and a package.json containing fabric-contract-api in the chaincode folder.
-285.	Invoke createStudent with 101, "Khush", "MSc CS", "88".
-286.	Query readStudent with 101, update the record, then delete it to demonstrate CRUD.
-3. Input Values
-Function	Input	Expected output
-createStudent	101, "Khush", "MSc CS", "88"	Student record stored
-readStudent	101	Student details in JSON
-updateStudent	101, "Khush", "MSc CS", "90"	Updated record
-deleteStudent	101	Student 101 deleted
+1. Install Docker Desktop and Git, then follow the official Hyperledger Fabric samples installation instructions for your operating system.
+2. Download the Fabric samples and binaries using the official installer script.
+3. Start the test network from the `fabric-samples/test-network` folder using `./network.sh up createChannel -ca` (Linux/macOS/Git Bash).
+4. Package and deploy the chaincode using the Fabric test-network chaincode lifecycle commands. The exact package/approve/commit commands depend on the Fabric version; use the commands supplied with the installed samples.
+5. Place `student.js` and a `package.json` containing `fabric-contract-api` in the chaincode folder.
+6. Invoke `createStudent` with `101, "Khush", "MSc CS", "88"`.
+7. Query `readStudent` with `101`, update the record, then delete it to demonstrate CRUD.
 
 ______________________________________________________________
 Practical 15A – Online Shopping Smart Contract (Remix, Solidity)
@@ -1671,18 +1661,13 @@ contract OnlineStore is Product {
     }
 }
 2. Steps to Perform
-287.	Open Remix and create onlineShopping.sol.
-288.	Compile with Solidity 0.8.21.
-289.	Select Remix VM, select OnlineStore, and click the arrow beside Deploy.
-290.	Enter constructor values 101, "Notebook", 100, 10 and deploy.
-291.	Set Value to 200 Wei; call buy with quantity 2.
-292.	Call displayProduct and stock to check remaining stock.
-293.	Use withdrawPayments from the owner account to withdraw collected payment.
-3. Input Values
-Function	Input	Expected output
-Constructor	101, "Notebook", 100, 10	Product created
-buy	Value 200 Wei, quantity 2	Purchase recorded; stock 8
-displayProduct	no input	101, "Notebook", 100, 8
+1. Open [https://remix.ethereum.org](https://remix.ethereum.org?utm_source=chatgpt.com) in the browser and create onlineShopping.sol.
+2. Click the Solidity Compiler icon and compile with Solidity 0.8.21.
+3. Click Deploy & Run Transactions, select Remix VM, select OnlineStore, and click the arrow beside Deploy.
+4. Enter constructor values `101, "Notebook", 100, 10` and click Deploy.
+5. Set Value to `200 Wei` and call buy with quantity `2`.
+6. Call displayProduct and stock to check the remaining stock.
+7. From the owner account, call withdrawPayments to withdraw the collected payment.
 
 ___________________________________________________________________
 Practical 15B – Vehicle Rental Smart Contract (Remix, Solidity)
@@ -1724,12 +1709,13 @@ contract VehicleRental {
     }
 }
 2. Steps to Perform
-294.	Open Remix and create VehicleRental.sol.
-295.	Compile with Solidity 0.8.21; deploy VehicleRental.
-296.	Call addVehicle with "Toyota", 100.
-297.	Set Value to 200 Wei and call rentVehicle with 1, 2.
-298.	Call vehicles with 1 to see availability set to false.
-299.	Call returnVehicle with 1; check availability again.
+1. Open [https://remix.ethereum.org](https://remix.ethereum.org?utm_source=chatgpt.com) in the browser and create VehicleRental.sol.
+2. Click the Solidity Compiler icon and compile with Solidity 0.8.21.
+3. Click Deploy & Run Transactions, select Remix VM, select VehicleRental, and click Deploy.
+4. Next to addVehicle, enter `"Toyota", 100` and click addVehicle.
+5. Set Value to `200 Wei` and call rentVehicle with `1, 2`.
+6. Call vehicles with `1` to check that availability is set to `false`.
+7. Call returnVehicle with `1` and check availability again.
 3. Input Values
 Function	Input	Expected output
 addVehicle	"Toyota", 100	Vehicle 1 added
@@ -1782,12 +1768,13 @@ contract DoctorAppointment {
     }
 }
 2. Steps to Perform
-300.	Open Remix and create DoctorAppointment.sol.
-301.	Compile with Solidity 0.8.21; deploy DoctorAppointment.
-302.	Set Value to 100 Wei, enter "Dr Mehta", 1700 in bookAppointment, and click it.
-303.	Call appointments with 1 to view the appointment.
-304.	From the same account, call cancelAppointment with 1.
-305.	To change the fee, use the owner account and call setAppointmentFee with 150.
+1. Open [https://remix.ethereum.org](https://remix.ethereum.org?utm_source=chatgpt.com) in the browser and create DoctorAppointment.sol.
+2. Click the Solidity Compiler icon and compile with Solidity 0.8.21.
+3. Click Deploy & Run Transactions, select Remix VM, select DoctorAppointment, and click Deploy.
+4. Set Value to `100 Wei`, enter `"Dr Mehta", 1700` in `bookAppointment`, and click it.
+5. Call `appointments` with `1` to view the appointment.
+6. From the same account, call `cancelAppointment` with `1`.
+7. To change the fee, use the owner account and call `setAppointmentFee` with `150`.
 3. Input Values
 Function	Input	Expected output
 bookAppointment	Value 100 Wei; "Dr Mehta", 1700	Appointment 1 booked
